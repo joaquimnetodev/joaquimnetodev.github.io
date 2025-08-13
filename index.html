@@ -41,7 +41,13 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 Joaquim B S Neto</p>
+      <p id="copyright">&copy; YEAR Joaquim B S Neto</p>
     </footer>
+    
+    <script>
+      var currentYear = new Date.getFullYear();
+      var copyright = document.querySelector("#copyright");
+      copyright.textContent = copyright.textContent.replace("YEAR", currentYear);      
+    </script>
   </body>
 </html>
