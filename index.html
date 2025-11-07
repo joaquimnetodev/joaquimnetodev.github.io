@@ -3,8 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joaquim Neto | Desenvolvedor Backend</title>
-    <meta name="description" content="Desenvolvedor Backend especializado em PHP, C# .NET, APIs e SQL. Formado em Análise e Desenvolvimento de Sistemas.">
+    <title>Joaquim Neto - Desenvolvedor Backend PHP | C# .NET | APIs</title>
+    <meta name="description" content="Desenvolvedor Backend especializado em PHP, C# .NET, APIs REST e MySQL. Formado em Análise e Desenvolvimento de Sistemas com experiência em desenvolvimento de sistemas web.">
+    <meta name="keywords" content="desenvolvedor backend, PHP, C#, .NET, MySQL, API REST, programador, analista de sistemas, desenvolvimento web">
+    <meta name="author" content="Joaquim Batista da Silva Neto">
+    
+    <meta property="og:title" content="Joaquim Neto - Desenvolvedor Backend">
+    <meta property="og:description" content="Desenvolvedor Backend especializado em PHP, C# .NET, APIs REST e MySQL">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joaquimnetodev.github.io">
+    <meta property="og:image" content="https://joaquimnetodev.github.io/og-image.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joaquim Neto - Desenvolvedor Backend">
+    <meta name="twitter:description" content="Desenvolvedor Backend especializado em PHP, C# .NET, APIs REST e MySQL">
+    <meta name="twitter:image" content="https://joaquimnetodev.github.io/og-image.jpg">
+    
+    <link rel="canonical" href="https://joaquimnetodev.github.io">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joaquim Batista da Silva Neto",
+        "jobTitle": "Desenvolvedor Backend",
+        "url": "https://joaquimnetodev.github.io",
+        "sameAs": [
+            "https://www.linkedin.com/in/joaquimnetodev",
+            "https://github.com/joaquimnetodev"
+        ],
+        "knowsAbout": ["PHP", "C#", ".NET", "MySQL", "API REST", "JavaScript", "Git"],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Fatec Araçatuba"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "LabPerego"
+        }
+    }
+    </script>
+    
     <style>
         :root {
             --primary: #2563eb;
@@ -35,6 +79,18 @@
             padding: 0 20px;
         }
 
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         header {
             background: linear-gradient(135deg, var(--dark), var(--primary-dark));
             color: white;
@@ -49,7 +105,7 @@
             object-fit: cover;
             border: 4px solid rgba(255, 255, 255, 0.2);
             margin: 0 auto 20px;
-            background-color: var(--secondary);
+            background-color: url("./perfil.jpg);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -396,11 +452,13 @@
     </style>
 </head>
 <body>
-    <header>
+    <a href="#main-content" class="sr-only">Pular para o conteúdo principal</a>
+    
+    <header itemscope itemtype="https://schema.org/Person">
         <div class="container">
-            <div class="profile-img">JN</div>
-            <h1>Joaquim Batista da Silva Neto</h1>
-            <p class="tagline">Desenvolvedor Backend | PHP | C# .NET | APIs & SQL</p>
+            <div class="profile-img" aria-hidden="true">JN</div>
+            <h1 itemprop="name">Joaquim Batista da Silva Neto</h1>
+            <p class="tagline" itemprop="jobTitle">Desenvolvedor Backend | PHP | C# .NET | APIs & SQL</p>
             <div class="tech-stack">
                 <span class="tech-pill">PHP</span>
                 <span class="tech-pill">C#</span>
@@ -410,13 +468,13 @@
                 <span class="tech-pill">JavaScript</span>
                 <span class="tech-pill">Git</span>
             </div>
-            <a href="curriculo_joaquim_neto.pdf" class="btn-download" download>
+            <a href="curriculo_joaquim_neto.pdf" class="btn-download" download aria-label="Baixar currículo em PDF">
                 📄 Baixar Currículo PDF
             </a>
         </div>
     </header>
 
-    <nav>
+    <nav aria-label="Navegação principal">
         <div class="container nav-container">
             <div class="logo">JoaquimNeto.dev</div>
             <ul class="nav-links">
@@ -424,107 +482,113 @@
                 <li><a href="#experiencia">Experiência</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-links">☰</button>
         </div>
     </nav>
 
-    <section id="sobre">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Sou Desenvolvedor Backend com formação em Análise e Desenvolvimento de Sistemas e experiência em desenvolvimento de sistemas web.</p>
-                    <p>Atuo no desenvolvimento e manutenção de sistemas com foco em backend, utilizando principalmente PHP e MySQL, com conhecimento em C#, .NET e APIs REST.</p>
-                    <p>Minha trajetória profissional começou no varejo, onde adquiri uma visão prática das operações de negócio. Esta experiência me motivou a migrar para a tecnologia, buscando criar soluções que resolvem problemas reais de forma escalável.</p>
+    <main id="main-content">
+        <section id="sobre">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Sou Desenvolvedor Backend com formação em Análise e Desenvolvimento de Sistemas e experiência em desenvolvimento de sistemas web.</p>
+                        <p>Atuo no desenvolvimento e manutenção de sistemas com foco em backend, utilizando principalmente PHP e MySQL, com conhecimento em C#, .NET e APIs REST.</p>
+                        <p>Minha trajetória profissional começou no varejo, onde adquiri uma visão prática das operações de negócio. Esta experiência me motivou a migrar para a tecnologia, buscando criar soluções que resolvem problemas reais de forma escalável.</p>
+                    </div>
+                    <div class="skills">
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h3>Tecnologias Backend</h3>
+                                <ul class="skill-list">
+                                    <li>PHP</li>
+                                    <li>C#</li>
+                                    <li>.NET</li>
+                                    <li>MySQL</li>
+                                    <li>API REST</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Ferramentas & Outros</h3>
+                                <ul class="skill-list">
+                                    <li>Git & GitHub</li>
+                                    <li>JavaScript</li>
+                                    <li>HTML & CSS</li>
+                                    <li>React JS</li>
+                                    <li>Metodologias Ágeis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skills">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>Tecnologias Backend</h3>
-                            <ul class="skill-list">
-                                <li>PHP</li>
-                                <li>C#</li>
-                                <li>.NET</li>
-                                <li>MySQL</li>
-                                <li>API REST</li>
+            </div>
+        </section>
+
+        <section id="experiencia">
+            <div class="container">
+                <h2 class="section-title">Experiência Profissional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024<br>Atual</div>
+                        <div class="timeline-content">
+                            <h3>Desenvolvedor Backend</h3>
+                            <p class="company">LabPerego</p>
+                            <ul>
+                                <li>Desenvolvimento e manutenção de sistemas em PHP</li>
+                                <li>Criação e consumo de APIs REST</li>
+                                <li>Modelagem e consultas em banco de dados MySQL</li>
+                                <li>Controle de versão utilizando Git e GitHub</li>
+                                <li>Implementação de funcionalidades com JavaScript</li>
                             </ul>
                         </div>
-                        <div class="skill-category">
-                            <h3>Ferramentas & Outros</h3>
-                            <ul class="skill-list">
-                                <li>Git & GitHub</li>
-                                <li>JavaScript</li>
-                                <li>HTML & CSS</li>
-                                <li>React JS</li>
-                                <li>Metodologias Ágeis</li>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016<br>2024</div>
+                        <div class="timeline-content">
+                            <h3>Profissional de Operações & Varejo</h3>
+                            <p class="company">Droga Raia</p>
+                            <ul>
+                                <li>Gestão de operações e equipes no varejo farmacêutico</li>
+                                <li>Desenvolvimento de habilidades de resolução de problemas</li>
+                                <li>Compreensão prática de processos de negócio</li>
+                                <li>Capacidade de trabalho em equipe e liderança</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="experiencia">
-        <div class="container">
-            <h2 class="section-title">Experiência Profissional</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024<br>Atual</div>
-                    <div class="timeline-content">
-                        <h3>Desenvolvedor Backend</h3>
-                        <p class="company">LabPerego</p>
-                        <ul>
-                            <li>Desenvolvimento e manutenção de sistemas em PHP</li>
-                            <li>Criação e consumo de APIs REST</li>
-                            <li>Modelagem e consultas em banco de dados MySQL</li>
-                            <li>Controle de versão utilizando Git e GitHub</li>
-                            <li>Implementação de funcionalidades com JavaScript</li>
+        <section id="contato">
+            <div class="container">
+                <h2 class="section-title">Contato</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Vamos conversar!</h3>
+                        <p>Estou sempre aberto a discutir novas oportunidades, projetos interessantes ou simplesmente trocar ideias sobre tecnologia.</p>
+                        <ul class="contact-details">
+                            <li>
+                                <i>✉️</i>
+                                <a href="mailto:netojoaquimbs@gmail.com">netojoaquimbs@gmail.com</a>
+                            </li>
+                            <li>
+                                <i>🔗</i>
+                                <a href="https://www.linkedin.com/in/joaquimnetodev" target="_blank" rel="noopener noreferrer">linkedin.com/in/joaquimnetodev</a>
+                            </li>
+                            <li>
+                                <i>💻</i>
+                                <a href="https://github.com/joaquimnetodev" target="_blank" rel="noopener noreferrer">github.com/joaquimnetodev</a>
+                            </li>
                         </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2016<br>2024</div>
-                    <div class="timeline-content">
-                        <h3>Profissional de Operações & Varejo</h3>
-                        <p class="company">Droga Raia</p>
-                        <ul>
-                            <li>Gestão de operações e equipes no varejo farmacêutico</li>
-                            <li>Desenvolvimento de habilidades de resolução de problemas</li>
-                            <li>Compreensão prática de processos de negócio</li>
-                            <li>Capacidade de trabalho em equipe e liderança</li>
-                        </ul>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/joaquimnetodev" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+                            <a href="https://github.com/joaquimnetodev" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">gh</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div class="container">
-            <h2 class="section-title">Contato</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Vamos conversar!</h3>
-                    <p>Estou sempre aberto a discutir novas oportunidades, projetos interessantes ou simplesmente trocar ideias sobre tecnologia.</p>
-                    <ul class="contact-details">
-                        <li>
-                            <i>✉️</i>
-                            <a href="mailto:netojoaquimbs@gmail.com">netojoaquimbs@gmail.com</a>
-                        </li>
-                        <li>
-                            <i>🔗</i>
-                            <a href="https://www.linkedin.com/in/joaquimnetodev" target="_blank">linkedin.com/in/joaquimnetodev</a>
-                        </li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/joaquimnetodev" class="social-link" target="_blank">in</a>
-                        <a href="https://github.com/joaquimnetodev" class="social-link" target="_blank">gh</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -539,6 +603,8 @@
         const navLinks = document.querySelector('.nav-links');
         
         mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
         
@@ -558,6 +624,7 @@
                     
                     if (window.innerWidth <= 768) {
                         navLinks.style.display = 'none';
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
                     }
                 }
             });
